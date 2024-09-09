@@ -20,3 +20,6 @@ class Testcaesar_encode(TestCase):
 
     def test_caesar_encode_whitespace(self):
         self.assertEqual(caesar_encode(" APPLE ", 2), " CRRNG ")
+
+    def test_caesar_encode_sentnce(self):
+        self.assertEqual(caesar_encode("Hola comoestas or something like that :)", 5), "MTQF HTRTJXYFX TW XTRJYMNSL QNPJ YMFY :)")
