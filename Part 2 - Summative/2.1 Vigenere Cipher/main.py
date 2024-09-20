@@ -1,6 +1,6 @@
 # Read the instructions to see what you need to do here!
 
-alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_"
+alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
 
 def vig_encode(text, keyword):
   new_str = ""

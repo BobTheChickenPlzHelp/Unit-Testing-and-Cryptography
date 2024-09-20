@@ -7,19 +7,19 @@ from main import vig_encode
 
 class Testvig_encode(TestCase):
     def test_Vigenere_encode_lowercase(self):
-        self.assertEqual(vig_encode("apple", "test"), "TTGDX")
+        self.assertEqual(vig_encode("apple", "TEST"), "TTGDX")
 
     def test_Vigenere_encode_uppercase(self):
-        self.assertEqual(vig_encode("Apple", "test"), "TTGDX")
+        self.assertEqual(vig_encode("Apple", "TEST"), "TTGDX")
 
     def test_Vigenere_encode_empty_num(self):
-        self.assertEqual(vig_encode("apple", "test"), "TTGDX")
+        self.assertEqual(vig_encode("apple", "TEST"), "TTGDX")
 
     def test_Vigenere_encode_empty_text(self):
-        self.assertEqual(vig_encode("Apple!", "test"), "TTGDX!")
+        self.assertEqual(vig_encode("Apple!", "TEST"), "TTGDX!")
 
     def test_Vigenere_encode__whitespace(self):
-        self.assertEqual(vig_encode(" APPLE ", "test"), " TTGDX ")
+        self.assertEqual(vig_encode(" APPLE ", "TEST"), "SEGHDIR")
 
     def test_Vigenere_encode_sentnce(self):
-        self.assertEqual(vig_encode("Hola comoestas or something like that :)", "test"), " SCTSGFEGIJLTWRGJDJGEIK ARYSDMBXSXZTLD:)")
+        self.assertEqual(vig_encode("Hola comoestas or something like that :)", "TEST"), " SCTSGFEGIJLTWRGJDJGEIK ARYSDMBXSXZTLD:)")
