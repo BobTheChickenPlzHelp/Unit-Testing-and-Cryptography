@@ -26,6 +26,7 @@ def affine_encode(text, a, b):
         if let in alpha:
             index = alpha.index(let)  # finds the index of the letter in alpha
             index = (index * a) % 26
+            index = (index + b) % 26
             new_str += alpha[index]  # adds the number into new_str
         else:
             new_str += let
@@ -38,6 +39,7 @@ def affine_decode(text, a, b):
         if let in alpha:
             index = alpha.index(let)  # finds the index of the letter in alpha
             index = (index * mod_inverse(a, 26)) % 26
+            index = (index - mod_inverse(b, 26)) % 26
             new_str += alpha[index]  # adds the number into new_str
         else:
             new_str += let
